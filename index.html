@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- preloads -->
+    <link rel="preload" href="./assets/css/normalize.css" as="style">
+    <link rel="preload" href="./assets/css/style.css" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" as="style">
+    <!-- normalize -->
+    <link rel="stylesheet" href="./assets/css/normalize.css">
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <link rel="shortcut icon" href="./assets/img/heart_like_love_twitter_icon_127132.ico" type="image/x-icon">
+
+</head>
+
+<body>
+    <div class="contenedor-general">
+        <div class="columna-1">
+            <h1>ELIGE TU CRUSH</h1>
+            <div>
+                <label for="nameInput">Ingresa el nombre de tu elegida</label>
+                <input id="texto" type="text" placeholder="escribe aquí" required>
+            </div>
+            <div>
+                <label for="atraccion">Quimica</label><br>
+                <input id="numero1" type="number" placeholder="1 a 10" min="0" max="10">
+            </div>
+            <div>
+                <label for="atraccion">Empatia</label><br>
+                <input id="numero2" type="number" placeholder="1 a 10" min="0" max="10">
+            </div>
+            <div>
+                <label for="atraccion">Confiable</label><br>
+                <input id="numero3" type="number" placeholder="1 a 10" min="0" max="10">
+            </div>
+            <div>
+                <label for="atraccion">Humildad</label><br>
+                <input id="numero4" type="number" placeholder="1 a 10" min="0" max="10">
+            </div>
+            <div>
+                <label for="atraccion">Atracción fisica</label><br>
+                <input id="numero5" type="number" placeholder="1 a 10" min="0" max="10">
+            </div>
+            <div>
+                <label for="atraccion">Voz</label><br>
+                <input id="numero6" type="number" placeholder="1 a 10" min="0" max="10">
+            </div>
+            <div>
+                <label for="atraccion">Inteligencia</label><br>
+                <input id="numero7" type="number" placeholder="1 a 10" min="0" max="10">
+            </div>
+
+            <!-- <button id="boton-add">Almacenar</button> -->
+            <button onclick="agregarElemento()">Agregar</button>
+        </div>
+
+        <div class="columna-2">
+            <h1>LISTA DE CRUSHES</h1>
+            <ol id="lista">
+
+            </ol>
+
+            <div>
+                <img src="./assets/img/heart-icon_34407.png" alt="corazon" onclick="clickearImagen()">
+            </div>
+            <div id="resultado">
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
