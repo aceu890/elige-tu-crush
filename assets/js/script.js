@@ -1,8 +1,21 @@
+// TODO: Validación para no ingresar números mayores a 10 en todos los inputs numbers
+const inputs = document.querySelectorAll("input[type='number']");
+
+inputs.forEach((input) => {
+  input.addEventListener("input", () => {
+    if (input.value > 10) {
+      input.value = 10;
+    }
+  });
+});
+
+// TODO:Funcion que se ejecuta al hacer click en el boton "agregar"
+// Array que guarda el puntaje total de cada envio de una crush X
 var sumas = [];
 
 function agregarElemento() {
 
-  //   // Obtener el valor del input text
+  // Obtener el valor del input text
   var valor = document.getElementById("texto").value;
 
   // Validar que el valor no esté vacío
@@ -31,7 +44,8 @@ function agregarElemento() {
   var suma = numero1 + numero2 + numero3 + numero4 + numero5 + numero6 + numero7;
 
   // Agregar la suma al array
-  sumas.push(suma);
+  sumas.push( valor + " con " + suma + " Ptos." );
+  console.log(sumas);
 
   // Validar que el valor no esté vacío
   if (suma === 0) {
@@ -64,7 +78,7 @@ function agregarElemento() {
 
 function clickearImagen() {
 
-    if (lista.childNodes.length >= 4) {
+    if (lista.childNodes.length >= 11) {
       var numeros = sumas;
       var maximo = numeros[0];
       for (var i = 1; i < numeros.length; i++) {
@@ -73,7 +87,7 @@ function clickearImagen() {
         } 
       }
        
-      document.getElementById("resultado").innerHTML = "El número mayor es " + maximo;
+      document.getElementById("resultado").innerHTML = "TU CRUSH ES: " + maximo;
     return;
   }
 

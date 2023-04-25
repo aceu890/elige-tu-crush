@@ -11,6 +11,7 @@ body {
   background-color:#353535;
   font-family: 'Poppins', sans-serif;
   text-align: center;
+  box-sizing: border-box;
 }
 
 h1 {
@@ -20,7 +21,7 @@ h1 {
 }
 
 h2 {
-  color: rgb(123, 108, 108);
+  color: rgb(203, 149, 149);
 }
 
 label {
@@ -53,6 +54,10 @@ button:hover {
   background-color: rgb(213, 86, 86);
 }
 
+.instrucciones {
+  color: rgb(206, 182, 182);
+}
+
 .contenedor-general {
   display: flex;
   gap: 10px;
@@ -72,6 +77,8 @@ button:hover {
 }
 
 .columna-2 {
+  display: flex;
+  flex-direction: column;
   width: 350px;
   height: 500px;
   background-color: rgb(187, 177, 177);
@@ -115,4 +122,10 @@ button:hover {
 
 .columna-2 img:hover::before {
   opacity: 1;
+}
+
+@media only screen and (max-width: 800px) {
+    .contenedor-general {
+      flex-direction: column;
+    }
 }
